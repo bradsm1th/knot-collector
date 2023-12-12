@@ -1,23 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <h1>Knots</h1>
 <hr />
 <!-- <pre>{{knot}}</pre> -->
 <ul class="knot-list">
-{% for knot in knots %}
-  <a href="{% url 'detail' knot.id %}">
-  <!-- <a href="/knots/{{ knot.id }}"> -->
     <li>
       <p>{{ knot.name.capitalize}}</p>
-      <!-- <dl>
+      <dl>
         <dt>Type:</dt>
         <dd>{{ knot.type }}</dd>
         <dt>Description</dt>
         <dd>{{ knot.description }}</dd>
-      </dl> -->
+      </dl>
     </li>
-  </a>
-  {% endfor %}
 </ul>
 {% endblock content %}

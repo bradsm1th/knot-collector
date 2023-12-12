@@ -18,3 +18,9 @@ footer.page-footer {
   font-size: 2em;
   margin-block-end: 0;
 }
+
+.knot-list a p:first-child:hover::after {
+ content: " →";
+ font-size: smaller;
+ vertical-align: auto;
+}

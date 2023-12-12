@@ -24,3 +24,7 @@ def home(request):
 def knots_index(request):
   knots = Knot.objects.all()
   return render(request, 'knots/index.html', {'knots': knots})
+
+def knots_detail(request, knot_id):
+  knot = Knot.objects.get(id=knot_id)
+  return render(request, 'knots/detail.html', {'knot': knot })
