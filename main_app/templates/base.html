@@ -15,11 +15,12 @@
     <nav>
       <div class="nav-wrapper">
         <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Knot Collector</a></li>
+          <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Knot Collector</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/knots">View All Knots</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="{% url 'knots_create' %}">Add a knot</a></li>
+          <li><a href="{% url 'index' %}">View all knots</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
         </ul>
       </div>
     </nav>
