@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Knots</h1>
+<hr />
+<!-- <pre>{{knot}}</pre> -->
+<ul class="knot-list">
+{% for knot in knots %}
+  <li>
+    <p>{{ knot.name.capitalize}}</p>
+    <dl>
+      <dt>Type:</dt>
+      <dd>{{ knot.type }}</dd>
+      <dt>Description</dt>
+      <dd>{{ knot.description }}</dd>
+    </dl>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}
