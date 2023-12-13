@@ -5,10 +5,10 @@
 <hr />
 <!-- <pre>{{knot}}</pre> -->
 <ul class="knot-list">
-{% for knot in knots %}
-  <a href="{% url 'detail' knot.id %}">
+  {% for knot in knots %}
   <!-- <a href="/knots/{{ knot.id }}"> -->
-    <li>
+  <li>
+    <a href="{% url 'detail' knot.id %}">
       <p>{{ knot.name.capitalize}}</p>
       <!-- <dl>
         <dt>Type:</dt>
@@ -16,8 +16,8 @@
         <dt>Description</dt>
         <dd>{{ knot.description }}</dd>
       </dl> -->
-    </li>
-  </a>
+    </a>
+  </li>
   {% endfor %}
 </ul>
 {% endblock content %}
