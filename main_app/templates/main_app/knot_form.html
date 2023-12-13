@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div style="text-align: center;"">
+  <pre>'object': {{object}}</pre>
+  <pre>'knot: {{knot}}</pre>
+</div>
+
 {% if object %}
   <h1>Update the {{ knot.name }}</h1>
 {% else %}
