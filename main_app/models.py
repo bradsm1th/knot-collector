@@ -11,6 +11,7 @@ KNOT_TYPES = (
  ('s', 'stopper'),
 )
 
+# the "one" of 1:M although I created the Knot ("many") first
 class TypeOfKnot(models.Model):
   type = models.CharField(
     max_length=1,
@@ -22,9 +23,9 @@ class TypeOfKnot(models.Model):
     return f"{self.get_type_display()}"
   
 
+# the "many" of 1:M but the first model I created
 class Knot(models.Model):
   name = models.CharField(max_length=100)
-  # type = models.CharField(max_length=50)
   description = models.CharField(max_length=250)
   type = models.ForeignKey(
     TypeOfKnot,

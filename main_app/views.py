@@ -2,16 +2,6 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Knot
-# knots = [
-#   {
-#     'name': 'bowline', 
-#     'types': ('loop', 'basic'), 'description': 'Makes a loop in the end of a rope'
-#     },
-#   {
-#     'name': 'figure eight', 
-#     'types': ('stopper',), 'description': 'A good stopper knot'
-#     },
-# ]
 
 # Create your views here.
 def about(request):
