@@ -10,4 +10,5 @@ urlpatterns = [
   path('knots/create/', views.KnotCreate.as_view(), name='knots_create'),
   path('knots/<int:pk>/update/', views.KnotUpdate.as_view(), name='knots_update'),
   path('knots/<int:pk>/delete/', views.KnotDelete.as_view(), name='knots_delete'),
+  # path('types/<int:type_id>/add_knot/', views.add_knot, name="add_knot"),
 ]

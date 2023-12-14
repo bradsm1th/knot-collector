@@ -17,6 +17,7 @@ def knots_index(request):
   knots = Knot.objects.all()
   return render(request, 'knots/index.html', {'knots': knots})
 
+
 def knots_detail(request, knot_id):
   knot = Knot.objects.get(id=knot_id)
   add_type_form = TypeOfKnotForm()
@@ -36,3 +37,7 @@ class KnotUpdate(UpdateView):
 class KnotDelete(DeleteView):
   model = Knot
   success_url = '/knots'
+
+
+# def add_knot(request, add_knot):
+#   pass

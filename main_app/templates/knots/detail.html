@@ -2,27 +2,38 @@
 
 {% block content %}
 
-<h1>Knots</h1>
-<hr />
-<ul class="knot-list">
-  <li>
-    <p>{{ knot.name.capitalize}}</p>
-    <p style="color: grey;">{{ knot.type|upper }} </p>
-    <p>{{ knot.description }}</p>
-  </li>
-</ul>
-<!-- <p>Type of knot: <strong><mark>{{ knot.type }}</mark></strong></p> -->
-<div class="card-action">
-  <a class='btn' href="{% url 'knots_update' knot.id %}">Update me</a>
-  <a class='btn red' href="{% url 'knots_delete' knot.id %}">Delete me</a>
+<div class="row">
+  <div class="col s12">
+    <h1>Knots</h1>
+    <hr />
+  </div>
 </div>
-<hr />
-<div class="col s6">
-  <p>Know what type of knot this is? Update it!</p>
-  <form action="" method="post">
-    {% csrf_token %}
-    {{ add_type_form.as_p }}
-  </form>
+<div class="row">
+  <div class="col s12">
+    <ul class="knot-list">
+      <li>
+        <p>{{ knot.name.capitalize}}</p>
+        <p style="color: grey;">{{ knot.type|upper }} </p>
+        <p>{{ knot.description }}</p>
+      </li>
+    </ul>
+    <!-- <p>Type of knot: <strong><mark>{{ knot.type }}</mark></strong></p> -->
+    <div class="card-action">
+      <a class='btn' href="{% url 'knots_update' knot.id %}">Update me</a>
+      <a class='btn red' href="{% url 'knots_delete' knot.id %}">Delete me</a>
+    </div>
+    <hr />
+  </div>
+<!-- </div> -->
+<!-- <div class="row"> -->
+  <div class="col s6">
+    <p>Know what type of knot this is? Update it!</p>
+    <form action="" method="post">
+      {% csrf_token %}
+      {{ add_type_form.as_p }}
+      <input type="submit" value="Add knot type" class="btn">
+    </form>
+  </div>
 </div>
 
 <script>
