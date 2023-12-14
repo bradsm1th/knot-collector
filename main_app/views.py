@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-from .models import Knot
+from .forms import TypeOfKnotForm
+from .models import Knot, TypeOfKnot
 
 # Create your views here.
 def about(request):
@@ -18,7 +19,8 @@ def knots_index(request):
 
 def knots_detail(request, knot_id):
   knot = Knot.objects.get(id=knot_id)
-  return render(request, 'knots/detail.html', {'knot': knot })
+  add_type_form = TypeOfKnotForm()
+  return render(request, 'knots/detail.html', {'knot': knot, 'add_type_form': add_type_form})
 
 
 # class-based views
